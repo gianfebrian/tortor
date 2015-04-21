@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=27517 node /home/itechnology/webapps/tortor/current/bin/www"
+    "start": "PORT=27517 node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.12.0",

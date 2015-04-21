@@ -2,7 +2,7 @@
   "server": "itechnology@itechnology.webfactional.com",
   "port": 22,
   "server_dir": "/home/itechnology/webapps/tortor",
-  "repo": "git@github.com:user/repo.git",
+  "repo": "git@github.com:gianfebrian/tortor.git",
   "prj_git_relative_dir": "",
   "branch": "master",
   "force_regenerate_git_dir": false,
@@ -14,5 +14,5 @@
     "npm install",
     "npm test"
   ],
-  "run_cmd": "npm start"
+  "run_cmd": "nohup npm start &"
 }

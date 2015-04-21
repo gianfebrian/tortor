@@ -23,7 +23,7 @@ router.post('/download', function(req, res, next) {
   client.add(magnetUri, function(torrent) {
     torrent.files.forEach(function(file) {
       filePaths.push(file.path);
-      fs.appendFileSync(, file.path);
+      fs.appendFileSync(lsFile, file.path);
       var source = file.createReadStream();
       var destination = fs.createWriteStream(util.format('%s/%s', dlPath, file.path));
       source.pipe(destination);

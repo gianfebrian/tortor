@@ -11,7 +11,7 @@
     "db"
   ],
   "prerun": [
-    "ln -nfs /home/itechnology/webapps/tortor/downloads/* tmp || true",
+    "ln -nfs /home/itechnology/Downloads/* tmp || true",
     "npm install",
     "npm test"
   ],

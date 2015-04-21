@@ -5,7 +5,7 @@ var fs = require('fs');
 var util = require('util');
 
 var WebTorrent = require('webtorrent');
-var dlPath = __dirname + '/../tmp/';
+var dlPath = __dirname + '/../tmp';
 var lsFile = __dirname + '/../tmp/files.txt';
 
 /* GET home page. */

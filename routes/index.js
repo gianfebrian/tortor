@@ -5,8 +5,8 @@ var fs = require('fs');
 var util = require('util');
 
 var WebTorrent = require('webtorrent');
-var dlPath = __dirname + '/../tmp';
-var lsFile = __dirname + '/../tmp/files.txt';
+var dlPath = 'tmp';
+var lsFile = dlPath + '/files.txt';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

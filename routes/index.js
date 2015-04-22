@@ -45,17 +45,19 @@ router.post('/download', function(req, res, next) {
     msg: 'magnetUri is undefined'
   });
 
-  var client = new WebTorrent();
+  var client = new WebTorrent({
+    storage: true
+  });
   var filePaths = [];
 
   client.add(magnetUri, function(torrent) {
     res.send('Now downloading ' + req.body.filepath);
-    /*console.log(magnetUri);
+    console.log(magnetUri);
     setInterval(function() {
       console.log('Downloaded: %s, Speed: %s',
         prettySize(torrent.swarm.downloaded),
         prettySize(torrent.swarm.downloadSpeed()) + '/s');
-    }, 1000);*/
+    }, 10000);
 
     torrent.files.forEach(function(file) {
       if (file.path == req.body.filepath) {

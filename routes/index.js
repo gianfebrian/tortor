@@ -25,7 +25,7 @@ router.post('/download', function(req, res, next) {
       filePaths.push(file.path);
       fs.appendFileSync(lsFile, file.path);
       var source = file.createReadStream();
-      var destination = fs.createWriteStream(util.format('%s/%s', dlPath, file.path));
+      var destination = fs.createWriteStream(util.format('%s/%s', dlPath, file.name));
       source.pipe(destination);
     });
 
